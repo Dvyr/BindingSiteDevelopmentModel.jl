@@ -1,0 +1,7 @@
+name = "BindingSiteDevelopmentModelDocs"
+uuid = "6ef1c5fe-8ebf-4f2f-a7d5-9b7d0d7dd9d3"
+authors = ["Dvyr"]
+version = "0.1.0"
+
+[deps]
+Documenter = "e30172f5-a6a5-5a46-88aa-469e-3c878ef75e6d"

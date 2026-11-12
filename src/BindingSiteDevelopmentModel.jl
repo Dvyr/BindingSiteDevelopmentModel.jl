@@ -1,0 +1,3 @@
+module BindingSiteDevelopmentModel
+
+end

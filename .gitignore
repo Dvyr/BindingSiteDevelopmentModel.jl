@@ -30,3 +30,7 @@ JuliaLocalPreferences.toml
 
 # Conda environment and metadata created in the project directory by the CondaPkg package
 .CondaPkg/
+
+README_old.md
+# Chain files may be very large and should be commited by default to GitHub.
+chain_storage/
