@@ -6,7 +6,8 @@ The first bond is fixed to (1,1,1).
 Each subsequent bond is chosen from three possible continuations defined by the Hadamard product
 of the previous bond with one of the vectors [-1,1,1], [1,-1,1], or [1,1,-1].
 
-Each chain is written as a fixed-length packed record.
+Each file starts with a small binary header that stores format metadata, including `N`.
+Each chain is then written as a fixed-length packed record.
 Returns the number of chains written.
 """
 function enumerate_saw(N::Int, filename::String)
@@ -30,6 +31,8 @@ function enumerate_saw(N::Int, filename::String)
     count = 0
 
     open(filename, "w") do io
+        write_chain_file_header(io, N)
+
         function grow(bond_number::Int, endpoint, prev_vector)
             if bond_number == N
                 packed = pack_directions(codes)
